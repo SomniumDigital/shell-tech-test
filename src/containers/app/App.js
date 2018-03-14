@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import connectedState from './app.state';
+import Ideas from '../../components/Ideas/Ideas';
 import './App.css';
 
 class App extends Component {
@@ -10,8 +11,15 @@ class App extends Component {
   }
 
   render() {
+    const { ideas } = this.props;
     return (
-      <div className="App"></div>
+      <div className="App">
+        {
+          ideas && ideas.list ?
+            <Ideas ideasList={ ideas.list} />
+            : null
+        }
+      </div>
     );
   }
 
