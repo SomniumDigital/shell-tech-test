@@ -7,6 +7,7 @@ import {
   RECIEVE_IDEAS,
   RECIEVE_NEW_IDEA
 } from './actions';
+import mockIdeas from '../../mockData/ideasMock'
 
 const middlewares = [ thunk ];
 const mockStore = configureMockStore(middlewares);
@@ -24,12 +25,7 @@ describe('Ideas actions', () => {
       const store = mockStore(mockInitialState);
 
       expect(getIdeas()(store.dispatch, store.getState).payload).toEqual([
-        {
-          "body": "This is the first idea",
-          "created_date": "1521025849202",
-          "id": "0001",
-          "title": "First idea"
-        }
+        ...mockIdeas
       ]);
     });
 
