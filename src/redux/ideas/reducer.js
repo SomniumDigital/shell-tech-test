@@ -6,7 +6,7 @@ import {
 } from './actions';
 
 const initialState = {
-  ideasList: [],
+  list: [],
   fetching: false
 };
 
@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
     case RECIEVE_IDEAS: {
       return {
         ...state,
-        ideasList: action.payload
+        list: action.payload
       }
     }
 
@@ -33,12 +33,11 @@ export default (state = initialState, action) => {
     }
 
     case RECIEVE_NEW_IDEA: {
-      console.log(state.ideasList);
       const { id, created_date } = action.payload;
       const newIdea = { id, created_date };
       return {
         ...state,
-        ideasList: [ ...state.ideasList, {...newIdea} ]
+        list: [ ...state.list, {...newIdea} ]
       }
     }
 

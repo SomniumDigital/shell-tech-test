@@ -14,7 +14,7 @@ describe('Ideas reducer', () => {
     };
 
     expect(ideasReducer(undefined, invalidAction)).toEqual({
-      ideasList: [],
+      list: [],
       fetching: false
     });
   });
@@ -25,7 +25,7 @@ describe('Ideas reducer', () => {
     }
 
     expect(ideasReducer(undefined, action)).toEqual({
-      ideasList: [],
+      list: [],
       fetching: true
     });
   });
@@ -39,7 +39,7 @@ describe('Ideas reducer', () => {
     }
 
     expect(ideasReducer(undefined, action)).toEqual({
-      ideasList: [
+      list: [
         {'test': 'test'}
       ],
       fetching: false
@@ -58,7 +58,7 @@ describe('Ideas reducer', () => {
     }
 
     expect(ideasReducer(undefined, action)).toEqual({
-      ideasList: [
+      list: [
         {
           id: '123ABC',
           created_date: '12345'
@@ -70,7 +70,7 @@ describe('Ideas reducer', () => {
 
   it('updates the state correctly when receiving a new idea', () => {
     const initialState = {
-      ideasList: [
+      list: [
         {
           "id": "0001",
           "created_date": "1521025849202",
@@ -90,7 +90,7 @@ describe('Ideas reducer', () => {
     }
 
     expect(ideasReducer(initialState, action)).toEqual({
-      ideasList: [
+      list: [
         {
           "id": "0001",
           "created_date": "1521025849202",

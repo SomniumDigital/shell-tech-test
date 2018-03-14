@@ -17,13 +17,13 @@ describe('Ideas actions', () => {
     it('returns the list of ideas in the payload', () => {
       const mockInitialState = {
         ideas: {
-            list: [],
-            fetching: false
+          list: [],
+          fetching: false
         }
       };
       const store = mockStore(mockInitialState);
 
-      expect(getIdeas(store.dispatch, store.getState).payload).toEqual([
+      expect(getIdeas()(store.dispatch, store.getState).payload).toEqual([
         {
           "body": "This is the first idea",
           "created_date": "1521025849202",
@@ -42,7 +42,7 @@ describe('Ideas actions', () => {
       };
       const store = mockStore(mockInitialState);
 
-      expect(getIdeas(store.dispatch, store.getState).type).toBe(RECIEVE_IDEAS);
+      expect(getIdeas()(store.dispatch, store.getState).type).toBe(RECIEVE_IDEAS);
     });
 
     it('returns \'null\' as the list of ideas are already in the state', () => {
@@ -56,7 +56,7 @@ describe('Ideas actions', () => {
       };
       const store = mockStore(mockInitialState);
 
-      expect(getIdeas(store.dispatch, store.getState)).toBeNull();
+      expect(getIdeas()(store.dispatch, store.getState)).toBeNull();
     });
   });
 
@@ -64,7 +64,7 @@ describe('Ideas actions', () => {
     it('returns the correct data in the payload', () => {
       const store = mockStore({});
 
-      expect(fetchNewIdea(store.dispatch).payload).toEqual(expect.objectContaining({
+      expect(fetchNewIdea()(store.dispatch).payload).toEqual(expect.objectContaining({
         id: expect.any(String),
         created_date: expect.any(Number)
       }));
@@ -73,7 +73,7 @@ describe('Ideas actions', () => {
     it('returns the correct action type', () => {
       const store = mockStore({});
 
-      expect(fetchNewIdea(store.dispatch).type).toBe(RECIEVE_NEW_IDEA);
+      expect(fetchNewIdea()(store.dispatch).type).toBe(RECIEVE_NEW_IDEA);
     });
   });
 });

@@ -45,7 +45,7 @@ const getCachedIdeas = (state) => {
   return false;
 };
 
-export const getIdeas = ( dispatch, getState ) => {
+export const getIdeas = () => ( dispatch, getState ) => {
   if (getCachedIdeas(getState())) {
     return dispatch(fetchIdeas());
   }
@@ -53,7 +53,7 @@ export const getIdeas = ( dispatch, getState ) => {
   return null;
 };
 
-export const fetchNewIdea = dispatch => {
+export const fetchNewIdea = () => dispatch => {
   dispatch(requestNewIdea());
 
   // Below is where the API request would normally be made
