@@ -1,12 +1,14 @@
 import { connect } from 'react-redux';
 import {
-  getIdeas
+  getIdeas,
+  fetchNewIdea
 } from '../../redux/ideas/actions';
 
 export const mapStateToProps = ideas => ideas;
 
 export const mapDispatchToProps = dispatch => ({
-  requestIdeas: () => dispatch(getIdeas())
+  requestIdeas: () => dispatch(getIdeas()),
+  createNewIdea: () => dispatch(fetchNewIdea())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps);

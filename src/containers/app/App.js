@@ -14,9 +14,12 @@ class App extends Component {
     const { ideas } = this.props;
     return (
       <div className="App">
+        <button type="button" onClick={this.props.createNewIdea}>
+          Create new idea
+        </button>
         {
           ideas && ideas.list ?
-            <Ideas ideasList={ ideas.list} />
+            <Ideas ideasList={ideas.list} />
             : null
         }
       </div>
