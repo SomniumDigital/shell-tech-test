@@ -3,8 +3,9 @@ import thunk from 'redux-thunk';
 
 import {
   getIdeas,
+  fetchNewIdea,
   RECIEVE_IDEAS,
-  REQUEST_IDEAS
+  RECIEVE_NEW_IDEA
 } from './actions';
 
 const middlewares = [ thunk ];
@@ -55,7 +56,24 @@ describe('Ideas actions', () => {
       };
       const store = mockStore(mockInitialState);
 
-      expect(getIdeas(store.dispatch, store.getState)).toBe(null);
+      expect(getIdeas(store.dispatch, store.getState)).toBeNull();
+    });
+  });
+
+  describe('.fetchNewIdea', () => {
+    it('returns the correct data in the payload', () => {
+      const store = mockStore({});
+
+      expect(fetchNewIdea(store.dispatch).payload).toEqual(expect.objectContaining({
+        id: expect.any(String),
+        created_date: expect.any(Number)
+      }));
+    });
+
+    it('returns the correct action type', () => {
+      const store = mockStore({});
+
+      expect(fetchNewIdea(store.dispatch).type).toBe(RECIEVE_NEW_IDEA);
     });
   });
 });
