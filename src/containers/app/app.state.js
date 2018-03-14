@@ -4,7 +4,7 @@ import {
   fetchNewIdea
 } from '../../redux/ideas/actions';
 
-export const mapStateToProps = ideas => ideas;
+export const mapStateToProps = state => state.ideas;
 
 export const mapDispatchToProps = dispatch => ({
   requestIdeas: () => dispatch(getIdeas()),

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
-import connectedState from './app.state';
+import connectedState from './App.state';
 import Ideas from '../../components/Ideas/Ideas';
 import './App.css';
 
@@ -11,15 +11,15 @@ class App extends Component {
   }
 
   render() {
-    const { ideas } = this.props;
+    const { list } = this.props;
     return (
       <div className="App">
         <button type="button" onClick={this.props.createNewIdea}>
           Create new idea
         </button>
         {
-          ideas && ideas.list ?
-            <Ideas ideasList={ideas.list} />
+          list && list.length ?
+            <Ideas ideasList={list} />
             : null
         }
       </div>
