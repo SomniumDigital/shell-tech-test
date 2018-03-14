@@ -18,3 +18,4 @@ class App extends Component {
 }
 
 export default compose(connectedState)(App);
+export { App };
