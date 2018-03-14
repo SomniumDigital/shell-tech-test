@@ -3,7 +3,9 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './containers/app/App';
-import reduxStore from './redux/store';
+import store from './redux/store';
+
+const reduxStore = store();
 
 render(
   <Provider store={reduxStore}>
