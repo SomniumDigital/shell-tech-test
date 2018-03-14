@@ -7,7 +7,8 @@ import {
 
 const initialState = {
   list: [],
-  fetching: false
+  fetching: false,
+  selectedIdea: null
 };
 
 export default (state = initialState, action) => {
@@ -37,7 +38,8 @@ export default (state = initialState, action) => {
       const newIdea = { id, created_date };
       return {
         ...state,
-        list: [ ...state.list, {...newIdea} ]
+        list: [ ...state.list, {...newIdea} ],
+        selectedIdea: id
       }
     }
 

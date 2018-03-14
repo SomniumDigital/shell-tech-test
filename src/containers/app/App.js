@@ -5,13 +5,12 @@ import Ideas from '../../components/Ideas/Ideas';
 import './App.css';
 
 class App extends Component {
-
   componentDidMount() {
     this.props.requestIdeas()
   }
 
   render() {
-    const { list } = this.props;
+    const { list, selectedIdea } = this.props;
     return (
       <div className="App">
         <button type="button" onClick={this.props.createNewIdea}>
@@ -19,7 +18,7 @@ class App extends Component {
         </button>
         {
           list && list.length ?
-            <Ideas ideasList={list} />
+            <Ideas ideasList={list} focusedIdea={selectedIdea}  />
             : null
         }
       </div>
