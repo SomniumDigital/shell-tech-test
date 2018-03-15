@@ -28,7 +28,8 @@ export default (state = initialState, action) => {
     case RECIEVE_IDEAS: {
       return {
         ...state,
-        list: action.payload
+        list: action.payload,
+        fetching: false
       }
     }
 

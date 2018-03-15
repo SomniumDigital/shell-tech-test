@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types'
 import { compose } from 'redux';
 import connectedState from './App.state';
 import Ideas from '../../components/Ideas/Ideas';
 import './App.css';
 
-class App extends Component {
+class App extends PureComponent {
   constructor(props) {
     super(props)
 
@@ -60,6 +61,28 @@ class App extends Component {
     );
   }
 
+}
+
+App.defaultProps = {
+  list: [],
+  recentNewIdea: null,
+  fetching: false,
+  posting: false,
+  requestIdeas: () => {},
+  createNewIdea: () => {},
+  updateIdea: () => {},
+  deleteIdea: () => {}
+}
+
+App.propTypes = {
+  list: PropTypes.array.isRequired,
+  recentNewIdea: PropTypes.string,
+  fetching: PropTypes.bool,
+  posting: PropTypes.bool,
+  requestIdeas: PropTypes.func.isRequired,
+  createNewIdea: PropTypes.func.isRequired,
+  updateIdea: PropTypes.func.isRequired,
+  deleteIdea: PropTypes.func.isRequired
 }
 
 export default compose(connectedState)(App);
