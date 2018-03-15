@@ -1,4 +1,5 @@
 import React  from 'react';
+import deleteIcon from '../../images/trash-icon.svg';
 
 const EditableIdea = ({
   edit,
@@ -24,8 +25,12 @@ const EditableIdea = ({
   };
 
   return (
-  <div onMouseEnter={() => editHandler(true)} onMouseLeave={() => editHandler(false)}>
-    <div className="title">
+  <div>
+    <div
+      className="title"
+      onMouseEnter={() => editHandler(true)}
+      onMouseLeave={() => editHandler(false)}
+    >
       { (editedIdea.id || focusedIdea) === idea.id ?
           <input
             type='text'
@@ -38,7 +43,11 @@ const EditableIdea = ({
           />
           : <h1>{idea.title || 'Enter title'}</h1> }
     </div>
-    <div className="body">
+    <div
+      className="body"
+      onMouseEnter={() => editHandler(true)}
+      onMouseLeave={() => editHandler(false)}
+    >
       { (editedIdea.id || focusedIdea) === idea.id ?
           <input
             type='text'
@@ -51,7 +60,10 @@ const EditableIdea = ({
           : <p>{idea.body || 'Enter idea'}</p> }
     </div>
     <div className="delete">
-      <button type="button">Delete</button>
+      <button type="button">
+        <img src={deleteIcon} alt="Delete" />
+        Delete
+      </button>
     </div>
   </div>
 )};

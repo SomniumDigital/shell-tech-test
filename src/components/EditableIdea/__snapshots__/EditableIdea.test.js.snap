@@ -34,15 +34,38 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          Test
-</h1>,
-        <p>
-          Test body
-</p>,
+        <div
+          className="title"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+>
+          <h1>
+                    Test
+          </h1>
+</div>,
+        <div
+          className="body"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+>
+          <p>
+                    Test body
+          </p>
+</div>,
+        <div
+          className="delete"
+>
+          <button
+                    type="button"
+          >
+                    <img
+                              alt="Delete"
+                              src="trash-icon.svg"
+                    />
+                    Delete
+          </button>
+</div>,
       ],
-      "onMouseEnter": [Function],
-      "onMouseLeave": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -51,22 +74,103 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Test",
+          "children": <h1>
+            Test
+</h1>,
+          "className": "title",
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
         },
         "ref": null,
-        "rendered": "Test",
-        "type": "h1",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Test",
+          },
+          "ref": null,
+          "rendered": "Test",
+          "type": "h1",
+        },
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Test body",
+          "children": <p>
+            Test body
+</p>,
+          "className": "body",
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
         },
         "ref": null,
-        "rendered": "Test body",
-        "type": "p",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Test body",
+          },
+          "ref": null,
+          "rendered": "Test body",
+          "type": "p",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <button
+            type="button"
+>
+            <img
+                        alt="Delete"
+                        src="trash-icon.svg"
+            />
+            Delete
+</button>,
+          "className": "delete",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Delete"
+                src="trash-icon.svg"
+/>,
+              "Delete",
+            ],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Delete",
+                "src": "trash-icon.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "Delete",
+          ],
+          "type": "button",
+        },
+        "type": "div",
       },
     ],
     "type": "div",
@@ -78,15 +182,38 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Test
-</h1>,
-          <p>
-            Test body
-</p>,
+          <div
+            className="title"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+>
+            <h1>
+                        Test
+            </h1>
+</div>,
+          <div
+            className="body"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+>
+            <p>
+                        Test body
+            </p>
+</div>,
+          <div
+            className="delete"
+>
+            <button
+                        type="button"
+            >
+                        <img
+                                    alt="Delete"
+                                    src="trash-icon.svg"
+                        />
+                        Delete
+            </button>
+</div>,
         ],
-        "onMouseEnter": [Function],
-        "onMouseLeave": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -95,22 +222,103 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Test",
+            "children": <h1>
+              Test
+</h1>,
+            "className": "title",
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
           },
           "ref": null,
-          "rendered": "Test",
-          "type": "h1",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Test",
+            },
+            "ref": null,
+            "rendered": "Test",
+            "type": "h1",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Test body",
+            "children": <p>
+              Test body
+</p>,
+            "className": "body",
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
           },
           "ref": null,
-          "rendered": "Test body",
-          "type": "p",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Test body",
+            },
+            "ref": null,
+            "rendered": "Test body",
+            "type": "p",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              type="button"
+>
+              <img
+                            alt="Delete"
+                            src="trash-icon.svg"
+              />
+              Delete
+</button>,
+            "className": "delete",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="Delete"
+                  src="trash-icon.svg"
+/>,
+                "Delete",
+              ],
+              "type": "button",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Delete",
+                  "src": "trash-icon.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "Delete",
+            ],
+            "type": "button",
+          },
+          "type": "div",
         },
       ],
       "type": "div",
@@ -160,15 +368,38 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          Test
-</h1>,
-        <p>
-          Test body
-</p>,
+        <div
+          className="title"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+>
+          <h1>
+                    Test
+          </h1>
+</div>,
+        <div
+          className="body"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+>
+          <p>
+                    Test body
+          </p>
+</div>,
+        <div
+          className="delete"
+>
+          <button
+                    type="button"
+          >
+                    <img
+                              alt="Delete"
+                              src="trash-icon.svg"
+                    />
+                    Delete
+          </button>
+</div>,
       ],
-      "onMouseEnter": [Function],
-      "onMouseLeave": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -177,22 +408,103 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Test",
+          "children": <h1>
+            Test
+</h1>,
+          "className": "title",
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
         },
         "ref": null,
-        "rendered": "Test",
-        "type": "h1",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Test",
+          },
+          "ref": null,
+          "rendered": "Test",
+          "type": "h1",
+        },
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Test body",
+          "children": <p>
+            Test body
+</p>,
+          "className": "body",
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
         },
         "ref": null,
-        "rendered": "Test body",
-        "type": "p",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Test body",
+          },
+          "ref": null,
+          "rendered": "Test body",
+          "type": "p",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <button
+            type="button"
+>
+            <img
+                        alt="Delete"
+                        src="trash-icon.svg"
+            />
+            Delete
+</button>,
+          "className": "delete",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Delete"
+                src="trash-icon.svg"
+/>,
+              "Delete",
+            ],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Delete",
+                "src": "trash-icon.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "Delete",
+          ],
+          "type": "button",
+        },
+        "type": "div",
       },
     ],
     "type": "div",
@@ -204,15 +516,38 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Test
-</h1>,
-          <p>
-            Test body
-</p>,
+          <div
+            className="title"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+>
+            <h1>
+                        Test
+            </h1>
+</div>,
+          <div
+            className="body"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+>
+            <p>
+                        Test body
+            </p>
+</div>,
+          <div
+            className="delete"
+>
+            <button
+                        type="button"
+            >
+                        <img
+                                    alt="Delete"
+                                    src="trash-icon.svg"
+                        />
+                        Delete
+            </button>
+</div>,
         ],
-        "onMouseEnter": [Function],
-        "onMouseLeave": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -221,22 +556,103 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Test",
+            "children": <h1>
+              Test
+</h1>,
+            "className": "title",
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
           },
           "ref": null,
-          "rendered": "Test",
-          "type": "h1",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Test",
+            },
+            "ref": null,
+            "rendered": "Test",
+            "type": "h1",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Test body",
+            "children": <p>
+              Test body
+</p>,
+            "className": "body",
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
           },
           "ref": null,
-          "rendered": "Test body",
-          "type": "p",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Test body",
+            },
+            "ref": null,
+            "rendered": "Test body",
+            "type": "p",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              type="button"
+>
+              <img
+                            alt="Delete"
+                            src="trash-icon.svg"
+              />
+              Delete
+</button>,
+            "className": "delete",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="Delete"
+                  src="trash-icon.svg"
+/>,
+                "Delete",
+              ],
+              "type": "button",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Delete",
+                  "src": "trash-icon.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "Delete",
+            ],
+            "type": "button",
+          },
+          "type": "div",
         },
       ],
       "type": "div",

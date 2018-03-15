@@ -1,3 +1,7 @@
+h1 {
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -24,7 +28,7 @@
 }
 
 .idea > div > div {
-  padding: 10px;
+  padding: 20px;
 }
 
 .focusIdea > div {
@@ -36,6 +40,24 @@
   width: 200px;
   margin: 0;
   font-size: 14px;
+}
+
+.idea button {
+  background: none;
+  border: 0;
+  color: #d00603;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.idea button img {
+  position: relative;
+  top: 4px;
+  right: 8px;
+}
+
+.idea button:hover {
+  cursor: pointer;
 }
 
 .idea .title {
