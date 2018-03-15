@@ -57,6 +57,9 @@ h1 {
   color: #d00603;
   font-weight: bold;
   font-size: 12px;
+  position: relative;
+  left: -70px;
+  top: -2px;
 }
 
 .idea button img {
