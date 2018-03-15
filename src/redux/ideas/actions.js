@@ -7,6 +7,8 @@ export const REQUEST_NEW_IDEA = 'REQUEST_NEW_IDEA';
 export const RECIEVE_NEW_IDEA = 'RECIEVE_NEW_IDEA';
 export const UPDATE_IDEA = 'UPDATE_IDEA';
 export const UPDATED_IDEA = 'UPDATED_IDEA';
+export const DELETE_IDEA = 'DELETE_IDEA';
+export const DELETED_IDEA = 'DELETED_IDEA';
 
 const requestIdeas = () => ({
   type: REQUEST_IDEAS
@@ -33,6 +35,16 @@ const updateIdea = (id, title, body) => ({
 const updatedIdea = (idea) => ({
   type: UPDATED_IDEA,
   payload: idea
+});
+
+const deleteIdea = (ideaId) => ({
+  type: DELETE_IDEA,
+  payload: ideaId
+});
+
+const deletedIdea = (ideaId) => ({
+  type: DELETED_IDEA,
+  payload: ideaId
 });
 
 const fetchIdeas = () => dispatch => {
@@ -69,7 +81,7 @@ export const fetchNewIdea = () => dispatch => {
 
   // Below is where the API GET request would normally be made
   // for the sake of the test I've created a UUID and a date
-  // I would expect this to actually be in the response from
+  // I would expect this to be returned in the response back from
   // the service endpoint
   const mockIdeaData = {
     id: uuidV4(),
@@ -84,6 +96,18 @@ export const postIdeaUpdate = (id, title, body) => dispatch => {
   dispatch(updateIdea(id, title, body))
 
   // After the POST request responds I would fire off the
-  // below dispatch using the reponse data
+  // below dispatch using the reponse data (in this case
+  // I expect it to return the id, title and body of the
+  // deleted item)
   return dispatch(updatedIdea({id, title, body}));
+};
+
+export const removeIdea = (id) => dispatch => {
+  // Below is where the API POST request would normally be made
+  dispatch(deleteIdea(id))
+
+  // After the POST request responds I would fire off the
+  // below dispatch using the reponse data (in this case
+  // I expect it to return the id of the deleted item)
+  return dispatch(deletedIdea(id));
 };

@@ -5,9 +5,11 @@ import {
   getIdeas,
   fetchNewIdea,
   postIdeaUpdate,
+  removeIdea,
   RECIEVE_IDEAS,
   RECIEVE_NEW_IDEA,
-  UPDATED_IDEA
+  UPDATED_IDEA,
+  DELETED_IDEA
 } from './actions';
 import mockIdeas from '../../mockData/ideasMock'
 
@@ -96,6 +98,24 @@ describe('Ideas actions', () => {
       const mockBody = 'Test Body';
 
       expect(postIdeaUpdate(mockId, mockTitle, mockBody)(store.dispatch).type).toBe(UPDATED_IDEA);
+    });
+  });
+
+  describe('.removeIdea', () => {
+    it('returns the correct idea id in the payload', () => {
+      const store = mockStore({});
+      const mockId = 'ABC123';
+
+      expect(postIdeaUpdate(mockId)(store.dispatch).payload).toEqual(expect.objectContaining({
+        id: expect.stringMatching(mockId)
+      }));
+    });
+
+    it('returns the correct action type', () => {
+      const store = mockStore({});
+      const mockId = 'ABC123';
+
+      expect(removeIdea(mockId)(store.dispatch).type).toBe(DELETED_IDEA);
     });
   });
 });
