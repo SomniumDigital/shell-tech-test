@@ -1,7 +1,15 @@
 import React from 'react';
 import EditableIdea from '../EditableIdea/EditableIdea';
 
-const Ideas = ({ ideasList, focusedIdea, edit, editHandler, editableIdeaId }) => (
+const Ideas = ({
+  ideasList,
+  focusedIdea,
+  edit,
+  editHandler,
+  editedIdea,
+  updateInput,
+  updateIdea
+}) => (
   <ul>
     {ideasList.map((idea) => {
       const cssClass = focusedIdea === idea.id ? 'focusIdea' : 'idea';
@@ -12,8 +20,10 @@ const Ideas = ({ ideasList, focusedIdea, edit, editHandler, editableIdeaId }) =>
               idea={idea}
               edit={edit}
               editIdea={editHandler}
-              editableIdeaId={editableIdeaId}
+              editedIdea={editedIdea}
               focusedIdea={focusedIdea}
+              updateInput={updateInput}
+              updateIdea={updateIdea}
             />
           </div>
         </li>

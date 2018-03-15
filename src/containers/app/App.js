@@ -9,22 +9,34 @@ class App extends Component {
     super(props)
 
     this.state = {
-      editableIdeaId: false
+      editedIdea: {
+        id: false
+      }
     }
 
     this.toggleEdit = this.toggleEdit.bind(this);
-  }
-
-  toggleEdit(id) {
-    this.state.edit ? this.setState({ editableIdeaId: false }) : this.setState({ editableIdeaId: id })
+    this.updateInput = this.updateInput.bind(this);
   }
 
   componentDidMount() {
     this.props.requestIdeas()
   }
 
+  toggleEdit(id) {
+    this.state.edit ? this.setState({ editIdea: { id: false } }) : this.setState({ editedIdea: { id } })
+  }
+
+  updateInput(inputName, inputValue, id) {
+    this.setState({
+      editedIdea: {
+        [inputName]: inputValue,
+        id
+      }
+    })
+  }
+
   render() {
-    const { list, recentNewIdea } = this.props;
+    const { list, recentNewIdea, updateIdea } = this.props;
     return (
       <div className="App">
         <button type="button" onClick={this.props.createNewIdea}>
@@ -32,7 +44,15 @@ class App extends Component {
         </button>
         {
           list && list.length ?
-            <Ideas ideasList={list} focusedIdea={recentNewIdea} edit={this.state.edit} editHandler={this.toggleEdit} editableIdeaId={this.state.editableIdeaId}  />
+            <Ideas
+              ideasList={list}
+              focusedIdea={recentNewIdea}
+              edit={this.state.edit}
+              editHandler={this.toggleEdit}
+              editedIdea={this.state.editedIdea}
+              updateInput={this.updateInput}
+              updateIdea={updateIdea}
+            />
             : null
         }
       </div>

@@ -4,8 +4,10 @@ import thunk from 'redux-thunk';
 import {
   getIdeas,
   fetchNewIdea,
+  postIdeaUpdate,
   RECIEVE_IDEAS,
-  RECIEVE_NEW_IDEA
+  RECIEVE_NEW_IDEA,
+  UPDATED_IDEA
 } from './actions';
 import mockIdeas from '../../mockData/ideasMock'
 
@@ -70,6 +72,30 @@ describe('Ideas actions', () => {
       const store = mockStore({});
 
       expect(fetchNewIdea()(store.dispatch).type).toBe(RECIEVE_NEW_IDEA);
+    });
+  });
+
+  describe('.postIdeaUpdate', () => {
+    it('returns the correct idea data in the payload', () => {
+      const store = mockStore({});
+      const mockId = 'ABC123';
+      const mockTitle = 'Test';
+      const mockBody = 'Test Body';
+
+      expect(postIdeaUpdate(mockId, mockTitle, mockBody)(store.dispatch).payload).toEqual(expect.objectContaining({
+        id: expect.stringMatching(mockId),
+        title: expect.stringMatching(mockTitle),
+        body: expect.stringMatching(mockBody)
+      }));
+    });
+
+    it('returns the correct action type', () => {
+      const store = mockStore({});
+      const mockId = 'ABC123';
+      const mockTitle = 'Test';
+      const mockBody = 'Test Body';
+
+      expect(postIdeaUpdate(mockId, mockTitle, mockBody)(store.dispatch).type).toBe(UPDATED_IDEA);
     });
   });
 });
