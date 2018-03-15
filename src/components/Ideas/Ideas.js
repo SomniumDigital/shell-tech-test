@@ -1,14 +1,20 @@
 import React from 'react';
+import EditableIdea from '../EditableIdea/EditableIdea';
 
-const Ideas = ({ ideasList, focusedIdea }) => (
+const Ideas = ({ ideasList, focusedIdea, edit, editHandler, editableIdeaId }) => (
   <ul>
     {ideasList.map((idea) => {
       const cssClass = focusedIdea === idea.id ? 'focusIdea' : 'idea';
       return (
         <li key={idea.id} className={cssClass}>
           <div>
-            <h1>{idea.title || 'Enter title'}</h1>
-            <p>{idea.body || 'Enter idea'}</p>
+            <EditableIdea
+              idea={idea}
+              edit={edit}
+              editIdea={editHandler}
+              editableIdeaId={editableIdeaId}
+              focusedIdea={focusedIdea}
+            />
           </div>
         </li>
       )}

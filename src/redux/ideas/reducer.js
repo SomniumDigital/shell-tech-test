@@ -8,7 +8,7 @@ import {
 const initialState = {
   list: [],
   fetching: false,
-  selectedIdea: null
+  recentNewIdea: null
 };
 
 export default (state = initialState, action) => {
@@ -29,7 +29,8 @@ export default (state = initialState, action) => {
 
     case REQUEST_NEW_IDEA: {
       return {
-        ...state
+        ...state,
+        fetching: true,
       }
     }
 
@@ -39,7 +40,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         list: [ ...state.list, {...newIdea} ],
-        selectedIdea: id
+        recentNewIdea: id
       }
     }
 

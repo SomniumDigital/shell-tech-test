@@ -28,14 +28,23 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <li>
+        <li
+          className="idea"
+>
           <div>
-                    <h1>
-                              Test title
-                    </h1>
-                    <p>
-                              This is a test
-                    </p>
+                    <EditableIdea
+                              edit={undefined}
+                              editIdea={undefined}
+                              editableIdeaId={undefined}
+                              focusedIdea={undefined}
+                              idea={
+                                        Object {
+                                                  "body": "This is a test",
+                                                  "id": "123ABC",
+                                                  "title": "Test title",
+                                                }
+                              }
+                    />
           </div>
 </li>,
       ],
@@ -48,13 +57,21 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div>
-            <h1>
-                        Test title
-            </h1>
-            <p>
-                        This is a test
-            </p>
+            <EditableIdea
+                        edit={undefined}
+                        editIdea={undefined}
+                        editableIdeaId={undefined}
+                        focusedIdea={undefined}
+                        idea={
+                                    Object {
+                                                "body": "This is a test",
+                                                "id": "123ABC",
+                                                "title": "Test title",
+                                              }
+                        }
+            />
 </div>,
+          "className": "idea",
         },
         "ref": null,
         "rendered": Object {
@@ -62,40 +79,40 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <h1>
-                Test title
-</h1>,
-              <p>
-                This is a test
-</p>,
-            ],
+            "children": <EditableIdea
+              edit={undefined}
+              editIdea={undefined}
+              editableIdeaId={undefined}
+              focusedIdea={undefined}
+              idea={
+                            Object {
+                                          "body": "This is a test",
+                                          "id": "123ABC",
+                                          "title": "Test title",
+                                        }
+              }
+/>,
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Test title",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "edit": undefined,
+              "editIdea": undefined,
+              "editableIdeaId": undefined,
+              "focusedIdea": undefined,
+              "idea": Object {
+                "body": "This is a test",
+                "id": "123ABC",
+                "title": "Test title",
               },
-              "ref": null,
-              "rendered": "Test title",
-              "type": "h1",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "This is a test",
-              },
-              "ref": null,
-              "rendered": "This is a test",
-              "type": "p",
-            },
-          ],
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": "div",
         },
         "type": "li",
@@ -110,14 +127,23 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <li>
+          <li
+            className="idea"
+>
             <div>
-                        <h1>
-                                    Test title
-                        </h1>
-                        <p>
-                                    This is a test
-                        </p>
+                        <EditableIdea
+                                    edit={undefined}
+                                    editIdea={undefined}
+                                    editableIdeaId={undefined}
+                                    focusedIdea={undefined}
+                                    idea={
+                                                Object {
+                                                            "body": "This is a test",
+                                                            "id": "123ABC",
+                                                            "title": "Test title",
+                                                          }
+                                    }
+                        />
             </div>
 </li>,
         ],
@@ -130,13 +156,21 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div>
-              <h1>
-                            Test title
-              </h1>
-              <p>
-                            This is a test
-              </p>
+              <EditableIdea
+                            edit={undefined}
+                            editIdea={undefined}
+                            editableIdeaId={undefined}
+                            focusedIdea={undefined}
+                            idea={
+                                          Object {
+                                                        "body": "This is a test",
+                                                        "id": "123ABC",
+                                                        "title": "Test title",
+                                                      }
+                            }
+              />
 </div>,
+            "className": "idea",
           },
           "ref": null,
           "rendered": Object {
@@ -144,40 +178,40 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <h1>
-                  Test title
-</h1>,
-                <p>
-                  This is a test
-</p>,
-              ],
+              "children": <EditableIdea
+                edit={undefined}
+                editIdea={undefined}
+                editableIdeaId={undefined}
+                focusedIdea={undefined}
+                idea={
+                                Object {
+                                                "body": "This is a test",
+                                                "id": "123ABC",
+                                                "title": "Test title",
+                                              }
+                }
+/>,
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Test title",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "edit": undefined,
+                "editIdea": undefined,
+                "editableIdeaId": undefined,
+                "focusedIdea": undefined,
+                "idea": Object {
+                  "body": "This is a test",
+                  "id": "123ABC",
+                  "title": "Test title",
                 },
-                "ref": null,
-                "rendered": "Test title",
-                "type": "h1",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "This is a test",
-                },
-                "ref": null,
-                "rendered": "This is a test",
-                "type": "p",
-              },
-            ],
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": "div",
           },
           "type": "li",

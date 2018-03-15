@@ -15,7 +15,8 @@ describe('Ideas reducer', () => {
 
     expect(ideasReducer(undefined, invalidAction)).toEqual({
       list: [],
-      fetching: false
+      fetching: false,
+      recentNewIdea: null
     });
   });
 
@@ -26,7 +27,8 @@ describe('Ideas reducer', () => {
 
     expect(ideasReducer(undefined, action)).toEqual({
       list: [],
-      fetching: true
+      fetching: true,
+      recentNewIdea: null
     });
   });
 
@@ -42,29 +44,20 @@ describe('Ideas reducer', () => {
       list: [
         {'test': 'test'}
       ],
-      fetching: false
+      fetching: false,
+      recentNewIdea: null
     });
   });
 
-  it('returns the correct data when receiving a new idea', () => {
+  it('returns the correct data when requesting a new idea', () => {
     const action = {
-      type: RECIEVE_IDEAS,
-      payload: [
-        {
-          id: '123ABC',
-          created_date: '12345'
-        }
-      ]
+      type: REQUEST_NEW_IDEA
     }
 
     expect(ideasReducer(undefined, action)).toEqual({
-      list: [
-        {
-          id: '123ABC',
-          created_date: '12345'
-        }
-      ],
-      fetching: false
+      list: [],
+      fetching: true,
+      recentNewIdea: null
     });
   });
 
@@ -102,7 +95,8 @@ describe('Ideas reducer', () => {
           created_date: '12345'
         },
       ],
-      fetching: false
+      fetching: false,
+      recentNewIdea: '123ABC'
     });
   });
 });
