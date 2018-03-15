@@ -9,8 +9,8 @@ const EditableIdea = ({
   updateInput,
   updateIdea
 }) => {
-  const clickHandler = () => {
-    editIdea(idea.id)
+  const editHandler = (bool) => {
+    editIdea(idea.id, bool)
   };
 
   const changeHandler = e => {
@@ -20,12 +20,11 @@ const EditableIdea = ({
   const blurHandler = () => {
     const title = editedIdea.ideaTitle || idea.title || 'Enter title';
     const body = editedIdea.ideaBody || idea.body || 'Enter idea';
-    console.log('BLUR', title, body);
     updateIdea(editedIdea.id, title, body)
   };
 
   return (
-  <div onMouseEnter={clickHandler} onMouseLeave={clickHandler}>
+  <div onMouseEnter={() => editHandler(true)} onMouseLeave={() => editHandler(false)}>
     { (editedIdea.id || focusedIdea) === idea.id ?
         <input
           type='text'

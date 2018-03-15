@@ -22,8 +22,8 @@ class App extends Component {
     this.props.requestIdeas()
   }
 
-  toggleEdit(id) {
-    this.state.edit ? this.setState({ editIdea: { id: false } }) : this.setState({ editedIdea: { id } })
+  toggleEdit(id, bool) {
+    bool ? this.setState({ editedIdea: { id } }) : this.setState({ editedIdea: { bool } })
   }
 
   updateInput(inputName, inputValue, id) {
