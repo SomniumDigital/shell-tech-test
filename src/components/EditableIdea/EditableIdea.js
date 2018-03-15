@@ -54,8 +54,7 @@ const EditableIdea = ({
       onMouseLeave={() => editHandler(false)}
     >
       { (editedIdea.id || focusedIdea) === idea.id ?
-          <input
-            type='text'
+          <textarea
             name='ideaBody'
             placeholder={idea.body || 'Enter idea'}
             value={editedIdea.ideaBody || ''}
