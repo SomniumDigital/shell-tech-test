@@ -39,12 +39,16 @@ const updatedIdea = (idea) => ({
 
 const deleteIdea = (ideaId) => ({
   type: DELETE_IDEA,
-  payload: ideaId
+  payload: {
+    id: ideaId
+  }
 });
 
 const deletedIdea = (ideaId) => ({
   type: DELETED_IDEA,
-  payload: ideaId
+  payload: {
+    id: ideaId
+  }
 });
 
 const fetchIdeas = () => dispatch => {

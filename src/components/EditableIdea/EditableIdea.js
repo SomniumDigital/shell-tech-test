@@ -8,7 +8,8 @@ const EditableIdea = ({
   editedIdea,
   focusedIdea,
   updateInput,
-  updateIdea
+  updateIdea,
+  deleteIdea
 }) => {
   const editHandler = (bool) => {
     editIdea(idea.id, bool)
@@ -23,6 +24,10 @@ const EditableIdea = ({
     const body = editedIdea.ideaBody || idea.body || 'Enter idea';
     updateIdea(editedIdea.id, title, body)
   };
+
+  const deleteHandler = () => {
+    deleteIdea(idea.id)
+  }
 
   return (
   <div>
@@ -60,7 +65,7 @@ const EditableIdea = ({
           : <p>{idea.body || 'Enter idea'}</p> }
     </div>
     <div className="delete">
-      <button type="button">
+      <button type="button" onClick={deleteHandler}>
         <img src={deleteIcon} alt="Delete" />
         Delete
       </button>

@@ -8,7 +8,8 @@ const Ideas = ({
   editHandler,
   editedIdea,
   updateInput,
-  updateIdea
+  updateIdea,
+  deleteIdea
 }) => (
   <ul>
     {ideasList.map((idea) => {
@@ -23,6 +24,7 @@ const Ideas = ({
               focusedIdea={focusedIdea}
               updateInput={updateInput}
               updateIdea={updateIdea}
+              deleteIdea={deleteIdea}
             />
         </li>
       )}

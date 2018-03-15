@@ -32,6 +32,7 @@ ShallowWrapper {
           className="idea"
 >
           <EditableIdea
+                    deleteIdea={undefined}
                     edit={undefined}
                     editIdea={undefined}
                     editedIdea={undefined}
@@ -57,6 +58,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <EditableIdea
+            deleteIdea={undefined}
             edit={undefined}
             editIdea={undefined}
             editedIdea={undefined}
@@ -79,6 +81,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "deleteIdea": undefined,
             "edit": undefined,
             "editIdea": undefined,
             "editedIdea": undefined,
@@ -111,6 +114,7 @@ ShallowWrapper {
             className="idea"
 >
             <EditableIdea
+                        deleteIdea={undefined}
                         edit={undefined}
                         editIdea={undefined}
                         editedIdea={undefined}
@@ -136,6 +140,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <EditableIdea
+              deleteIdea={undefined}
               edit={undefined}
               editIdea={undefined}
               editedIdea={undefined}
@@ -158,6 +163,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "deleteIdea": undefined,
               "edit": undefined,
               "editIdea": undefined,
               "editedIdea": undefined,

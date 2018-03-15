@@ -36,7 +36,7 @@ class App extends Component {
   }
 
   render() {
-    const { list, recentNewIdea, updateIdea } = this.props;
+    const { list, recentNewIdea, updateIdea, deleteIdea } = this.props;
     return (
       <div className="App">
         <button type="button" onClick={this.props.createNewIdea}>
@@ -52,6 +52,7 @@ class App extends Component {
               editedIdea={this.state.editedIdea}
               updateInput={this.updateInput}
               updateIdea={updateIdea}
+              deleteIdea={deleteIdea}
             />
             : null
         }
