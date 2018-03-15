@@ -70,7 +70,8 @@ export default (state = initialState, action) => {
       })
       return {
         ...state,
-        list
+        list,
+        recentNewIdea: null
       }
     }
 
