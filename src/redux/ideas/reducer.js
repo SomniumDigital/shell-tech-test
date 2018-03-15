@@ -4,7 +4,9 @@ import {
   REQUEST_NEW_IDEA,
   RECIEVE_NEW_IDEA,
   UPDATE_IDEA,
-  UPDATED_IDEA
+  UPDATED_IDEA,
+  DELETE_IDEA,
+  DELETED_IDEA
 } from './actions';
 
 const initialState = {
@@ -72,6 +74,22 @@ export default (state = initialState, action) => {
         ...state,
         list,
         recentNewIdea: null
+      }
+    }
+
+    case DELETE_IDEA:{
+      return {
+        ...state,
+        posting: true
+      }
+    }
+
+    case DELETED_IDEA:{
+      const { id } = action.payload;
+      return {
+        ...state,
+        list: state.list.filter(idea => idea.id !== id),
+        posting: false
       }
     }
 

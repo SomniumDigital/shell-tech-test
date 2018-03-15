@@ -4,7 +4,9 @@ import {
   REQUEST_NEW_IDEA,
   RECIEVE_NEW_IDEA,
   UPDATE_IDEA,
-  UPDATED_IDEA
+  UPDATED_IDEA,
+  DELETE_IDEA,
+  DELETED_IDEA
 } from './actions';
 import ideasReducer from './reducer';
 
@@ -24,7 +26,7 @@ describe('Ideas reducer', () => {
   });
 
   describe('Request & Receive ideas', () => {
-    it('returns \'fetching\' as true when requesting ideas', () => {
+    it('Returns the correct data when calling GET all ideas', () => {
       const action = {
         type: REQUEST_IDEAS,
       }
@@ -57,7 +59,7 @@ describe('Ideas reducer', () => {
   });
 
   describe('Request & Receive a new idea', () => {
-    it('returns the correct data when requesting a new idea', () => {
+    it('Returns the correct data when calling GET a new idea', () => {
       const action = {
         type: REQUEST_NEW_IDEA
       }
@@ -112,8 +114,8 @@ describe('Ideas reducer', () => {
     });
   });
 
-  describe('Update an idea', () => {
-    it('POSTs an update with the correct data', () => {
+  describe('Request & Receive an updated idea', () => {
+    it('Returns the correct data when calling POST to update an idea', () => {
       const action = {
         type: UPDATE_IDEA,
         payload: {
@@ -130,9 +132,7 @@ describe('Ideas reducer', () => {
         posting: true
       });
     });
-  });
 
-  describe('An Updated idea', () => {
     it('Receives a response with the correct data', () => {
       const initialState = {
         list: [
@@ -184,4 +184,62 @@ describe('Ideas reducer', () => {
       });
     });
   });
+
+  describe('Request & Receive a deleted idea', () => {
+    it('Returns the correct data when calling POST to delete an idea', () => {
+      const action = {
+        type: DELETE_IDEA,
+        payload: '123ABC'
+      }
+
+      expect(ideasReducer(undefined, action)).toEqual({
+        list: [],
+        fetching: false,
+        recentNewIdea: null,
+        posting: true
+      });
+    });
+
+    it('updates the state correctly when deleting an idea', () => {
+      const initialState = {
+        list: [
+          {
+            "id": "0001",
+            "created_date": "1521025849202",
+            "title": "First idea",
+            "body": "This is the first idea"
+          },
+          {
+            "id": "123ABC",
+            "created_date": "1521025849202",
+            "title": "Test idea",
+            "body": "I am going to be deleted"
+          }
+        ],
+        fetching: false,
+        posting: false
+      };
+
+      const action = {
+        type: DELETED_IDEA,
+        payload: {
+          id: '123ABC',
+        }
+      }
+
+      expect(ideasReducer(initialState, action)).toEqual({
+        list: [
+          {
+            "id": "0001",
+            "created_date": "1521025849202",
+            "title": "First idea",
+            "body": "This is the first idea"
+          }
+        ],
+        fetching: false,
+        posting: false
+      });
+    });
+  });
+
 });
