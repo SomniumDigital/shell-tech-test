@@ -39,7 +39,7 @@ class App extends Component {
     const { list, recentNewIdea, updateIdea, deleteIdea } = this.props;
     return (
       <div className="App">
-        <button type="button" onClick={this.props.createNewIdea}>
+        <button type="button" onClick={this.props.createNewIdea} className="newIdeaBtn">
           Create new idea
         </button>
         {
