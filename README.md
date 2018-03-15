@@ -9,7 +9,7 @@ You can run the Jest unit tests using `yarn test`.
 
 This application has been build using [Create React App](https://github.com/facebook/create-react-app) from Facebook.
 
-The application uses a combination of [Redux](https://redux.js.org/) and [Thunk](https://github.com/gaearon/redux-thunk) for state management.
+The application uses a combination of [Redux](https://redux.js.org/) and [Thunk](https://github.com/gaearon/redux-thunk) for state management. If you'd like to view the state indepth try using [Redux Dev Tools](http://extension.remotedev.io/).
 
 If you'd like to take a look at a production build run `yarn build`, the production files will be found in `/build`.
 
