@@ -1,3 +1,61 @@
 .App {
   text-align: center;
 }
+
+.App ul li {
+  padding: 0 10px 0 10px;
+}
+
+.idea,
+.focusIdea {
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.idea > div,
+.focusIdea > div {
+  min-width: 200px;
+  max-width: 300px;
+  min-height: 400px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  border-radius: 10px;
+  position: relative;
+}
+
+.idea > div > div {
+  padding: 10px;
+}
+
+.focusIdea > div {
+  border: 2px #90CAF9 solid;
+}
+
+.idea input {
+  height: 30px;
+  width: 200px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.idea .title {
+  background: #37547D;
+  color: #FFF;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.idea .body {
+  background: #FFF;
+  color: #616161;
+}
+
+.idea .delete {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: #E0E0E0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   toggleEdit(id, bool) {
-    bool ? this.setState({ editedIdea: { id } }) : this.setState({ editedIdea: { bool } })
+    bool ? this.setState({ editedIdea: { id } }) : this.setState({ editedIdea: { id: bool } })
   }
 
   updateInput(inputName, inputValue, id) {

@@ -12,10 +12,9 @@ const Ideas = ({
 }) => (
   <ul>
     {ideasList.map((idea) => {
-      const cssClass = focusedIdea === idea.id ? 'focusIdea' : 'idea';
+      const cssClass = focusedIdea === idea.id ? 'focusIdea idea' : 'idea';
       return (
         <li key={idea.id} className={cssClass}>
-          <div>
             <EditableIdea
               idea={idea}
               edit={edit}
@@ -25,7 +24,6 @@ const Ideas = ({
               updateInput={updateInput}
               updateIdea={updateIdea}
             />
-          </div>
         </li>
       )}
     )}
