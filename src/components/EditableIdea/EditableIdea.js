@@ -19,7 +19,7 @@ const EditableIdea = ({
     updateInput(e.target.name, e.target.value, idea.id)
   };
 
-  const blurHandler = () => {
+  const updateHandler = () => {
     const title = editedIdea.ideaTitle || idea.title || 'Enter title';
     const body = editedIdea.ideaBody || idea.body || 'Enter idea';
     updateIdea(editedIdea.id, title, body)
@@ -34,7 +34,12 @@ const EditableIdea = ({
     <div
       className="title"
       onMouseEnter={() => editHandler(true)}
-      onMouseLeave={() => editHandler(false)}
+      onMouseLeave={
+        () => {
+          editHandler(false);
+          updateHandler();
+        }
+      }
     >
       { (editedIdea.id || focusedIdea) === idea.id ?
           <input
@@ -44,14 +49,19 @@ const EditableIdea = ({
             placeholder={idea.title || 'Enter title'}
             value={editedIdea.ideaTitle || ''}
             onChange={changeHandler}
-            onBlur={blurHandler}
+            onBlur={updateHandler}
           />
           : <h1>{idea.title || 'Enter title'}</h1> }
     </div>
     <div
       className="body"
       onMouseEnter={() => editHandler(true)}
-      onMouseLeave={() => editHandler(false)}
+      onMouseLeave={
+        () => {
+          editHandler(false);
+          updateHandler();
+        }
+      }
     >
       { (editedIdea.id || focusedIdea) === idea.id ?
           <textarea
@@ -59,7 +69,7 @@ const EditableIdea = ({
             placeholder={idea.body || 'Enter idea'}
             value={editedIdea.ideaBody || ''}
             onChange={changeHandler}
-            onBlur={blurHandler}
+            onBlur={updateHandler}
           />
           : <p>{idea.body || 'Enter idea'}</p> }
     </div>
