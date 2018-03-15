@@ -17,7 +17,9 @@ describe('Component: EditableIdea', () => {
         }}
         edit={false}
         editIdea={jest.fn()}
-        editableIdeaId={'ABC123'}
+        editedIdea={{
+          id: false
+        }}
         focusedIdea={null}
       />
     );
@@ -35,7 +37,9 @@ describe('Component: EditableIdea', () => {
         }}
         edit={false}
         editIdea={jest.fn()}
-        editableIdeaId={false}
+        editedIdea={{
+          id: false
+        }}
         focusedIdea={null}
       />
     );

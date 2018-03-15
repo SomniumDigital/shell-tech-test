@@ -7,139 +7,11 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <EditableIdea
     edit={false}
     editIdea={[Function]}
-    editableIdeaId="ABC123"
-    focusedIdea={null}
-    idea={
+    editedIdea={
         Object {
-            "body": "Test body",
-            "id": "ABC123",
-            "title": "Test",
+            "id": false,
           }
     }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <input
-          autoFocus={true}
-          placeholder="Test"
-          type="text"
-/>,
-        <input
-          placeholder="Test body"
-          type="text"
-/>,
-      ],
-      "onClick": [Function],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "autoFocus": true,
-          "placeholder": "Test",
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "placeholder": "Test body",
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <input
-            autoFocus={true}
-            placeholder="Test"
-            type="text"
-/>,
-          <input
-            placeholder="Test body"
-            type="text"
-/>,
-        ],
-        "onClick": [Function],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "autoFocus": true,
-            "placeholder": "Test",
-            "type": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "placeholder": "Test body",
-            "type": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
-`;
-
-exports[`Component: EditableIdea renders correctly (without inputs) 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <EditableIdea
-    edit={false}
-    editIdea={[Function]}
-    editableIdeaId={false}
     focusedIdea={null}
     idea={
         Object {
@@ -169,7 +41,8 @@ ShallowWrapper {
           Test body
 </p>,
       ],
-      "onClick": [Function],
+      "onMouseEnter": [Function],
+      "onMouseLeave": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -212,7 +85,134 @@ ShallowWrapper {
             Test body
 </p>,
         ],
-        "onClick": [Function],
+        "onMouseEnter": [Function],
+        "onMouseLeave": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Test",
+          },
+          "ref": null,
+          "rendered": "Test",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Test body",
+          },
+          "ref": null,
+          "rendered": "Test body",
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Component: EditableIdea renders correctly (without inputs) 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <EditableIdea
+    edit={false}
+    editIdea={[Function]}
+    editedIdea={
+        Object {
+            "id": false,
+          }
+    }
+    focusedIdea={null}
+    idea={
+        Object {
+            "body": "Test body",
+            "id": "ABC123",
+            "title": "Test",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Test
+</h1>,
+        <p>
+          Test body
+</p>,
+      ],
+      "onMouseEnter": [Function],
+      "onMouseLeave": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Test",
+        },
+        "ref": null,
+        "rendered": "Test",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Test body",
+        },
+        "ref": null,
+        "rendered": "Test body",
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Test
+</h1>,
+          <p>
+            Test body
+</p>,
+        ],
+        "onMouseEnter": [Function],
+        "onMouseLeave": [Function],
       },
       "ref": null,
       "rendered": Array [

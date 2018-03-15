@@ -35,7 +35,7 @@ ShallowWrapper {
                     <EditableIdea
                               edit={undefined}
                               editIdea={undefined}
-                              editableIdeaId={undefined}
+                              editedIdea={undefined}
                               focusedIdea={undefined}
                               idea={
                                         Object {
@@ -44,6 +44,8 @@ ShallowWrapper {
                                                   "title": "Test title",
                                                 }
                               }
+                              updateIdea={undefined}
+                              updateInput={undefined}
                     />
           </div>
 </li>,
@@ -60,7 +62,7 @@ ShallowWrapper {
             <EditableIdea
                         edit={undefined}
                         editIdea={undefined}
-                        editableIdeaId={undefined}
+                        editedIdea={undefined}
                         focusedIdea={undefined}
                         idea={
                                     Object {
@@ -69,6 +71,8 @@ ShallowWrapper {
                                                 "title": "Test title",
                                               }
                         }
+                        updateIdea={undefined}
+                        updateInput={undefined}
             />
 </div>,
           "className": "idea",
@@ -82,7 +86,7 @@ ShallowWrapper {
             "children": <EditableIdea
               edit={undefined}
               editIdea={undefined}
-              editableIdeaId={undefined}
+              editedIdea={undefined}
               focusedIdea={undefined}
               idea={
                             Object {
@@ -91,6 +95,8 @@ ShallowWrapper {
                                           "title": "Test title",
                                         }
               }
+              updateIdea={undefined}
+              updateInput={undefined}
 />,
           },
           "ref": null,
@@ -101,13 +107,15 @@ ShallowWrapper {
             "props": Object {
               "edit": undefined,
               "editIdea": undefined,
-              "editableIdeaId": undefined,
+              "editedIdea": undefined,
               "focusedIdea": undefined,
               "idea": Object {
                 "body": "This is a test",
                 "id": "123ABC",
                 "title": "Test title",
               },
+              "updateIdea": undefined,
+              "updateInput": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -134,7 +142,7 @@ ShallowWrapper {
                         <EditableIdea
                                     edit={undefined}
                                     editIdea={undefined}
-                                    editableIdeaId={undefined}
+                                    editedIdea={undefined}
                                     focusedIdea={undefined}
                                     idea={
                                                 Object {
@@ -143,6 +151,8 @@ ShallowWrapper {
                                                             "title": "Test title",
                                                           }
                                     }
+                                    updateIdea={undefined}
+                                    updateInput={undefined}
                         />
             </div>
 </li>,
@@ -159,7 +169,7 @@ ShallowWrapper {
               <EditableIdea
                             edit={undefined}
                             editIdea={undefined}
-                            editableIdeaId={undefined}
+                            editedIdea={undefined}
                             focusedIdea={undefined}
                             idea={
                                           Object {
@@ -168,6 +178,8 @@ ShallowWrapper {
                                                         "title": "Test title",
                                                       }
                             }
+                            updateIdea={undefined}
+                            updateInput={undefined}
               />
 </div>,
             "className": "idea",
@@ -181,7 +193,7 @@ ShallowWrapper {
               "children": <EditableIdea
                 edit={undefined}
                 editIdea={undefined}
-                editableIdeaId={undefined}
+                editedIdea={undefined}
                 focusedIdea={undefined}
                 idea={
                                 Object {
@@ -190,6 +202,8 @@ ShallowWrapper {
                                                 "title": "Test title",
                                               }
                 }
+                updateIdea={undefined}
+                updateInput={undefined}
 />,
             },
             "ref": null,
@@ -200,13 +214,15 @@ ShallowWrapper {
               "props": Object {
                 "edit": undefined,
                 "editIdea": undefined,
-                "editableIdeaId": undefined,
+                "editedIdea": undefined,
                 "focusedIdea": undefined,
                 "idea": Object {
                   "body": "This is a test",
                   "id": "123ABC",
                   "title": "Test title",
                 },
+                "updateIdea": undefined,
+                "updateInput": undefined,
               },
               "ref": null,
               "rendered": null,
